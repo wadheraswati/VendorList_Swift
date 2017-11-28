@@ -12,6 +12,8 @@
 		D93CFBB01F8CCC35005BD342 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D93CFBAE1F8CCC35005BD342 /* Main.storyboard */; };
 		D93CFBB21F8CCC35005BD342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D93CFBB11F8CCC35005BD342 /* Assets.xcassets */; };
 		D93CFBB51F8CCC35005BD342 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D93CFBB31F8CCC35005BD342 /* LaunchScreen.storyboard */; };
+		D9BE5C7A1F907CCA00A81EE8 /* vendorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BE5C791F907CCA00A81EE8 /* vendorCell.swift */; };
+		D9DA2A9B1FB1ADCD002F76B8 /* vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DA2A9A1FB1ADCD002F76B8 /* vendor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		D93CFBB11F8CCC35005BD342 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D93CFBB41F8CCC35005BD342 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D93CFBB61F8CCC35005BD342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9BE5C791F907CCA00A81EE8 /* vendorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vendorCell.swift; sourceTree = "<group>"; };
+		D9DA2A9A1FB1ADCD002F76B8 /* vendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vendor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				D93CFBB11F8CCC35005BD342 /* Assets.xcassets */,
 				D93CFBB31F8CCC35005BD342 /* LaunchScreen.storyboard */,
 				D93CFBB61F8CCC35005BD342 /* Info.plist */,
+				D9BE5C791F907CCA00A81EE8 /* vendorCell.swift */,
+				D9DA2A9A1FB1ADCD002F76B8 /* vendor.swift */,
 			);
 			path = VendorList;
 			sourceTree = "<group>";
@@ -137,6 +143,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D93CFBAD1F8CCC35005BD342 /* ViewController.swift in Sources */,
+				D9DA2A9B1FB1ADCD002F76B8 /* vendor.swift in Sources */,
+				D9BE5C7A1F907CCA00A81EE8 /* vendorCell.swift in Sources */,
 				D93CFBAB1F8CCC35005BD342 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
