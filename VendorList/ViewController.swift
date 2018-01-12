@@ -6,6 +6,9 @@
 //  Copyright © 2017 Swati Wadhera. All rights reserved.
 //
 
+//#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -124,7 +127,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     }
     
-    // MARK : UITableViewDelegate Methods
+    // MARK: - UITableViewDelegate Methods -
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
@@ -135,6 +138,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.cityLbl.text = vendorList[indexPath.row].city
         let price : String = vendorList[indexPath.row].price
         cell.priceLbl.text = "₹ \(price)"
+        
+        cell.reviewLbl.text = "\(vendorList[indexPath.row].reviews) Reviews"
+        cell.starLbl.text = "★ \(vendorList[indexPath.row].rating)"
+        cell.starLbl.backgroundColor = getBackgroundColorForRating(Float(vendorList[indexPath.row].rating)!)
         
         let image : UIImage! = imageCache["\(indexPath.row)"]
         // reset reused cell image to placeholder
@@ -187,8 +194,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    func ColorCode(_ rgb : Int) -> UIColor {
+        return UIColor.init(red: CGFloat(255 & rgb), green: CGFloat(255 & rgb), blue: CGFloat(255 & rgb), alpha: 1)
+    }
     
+    func getBackgroundColorForRating(_ rating : Float) -> UIColor {
+        if(rating <= 1) { return ColorCode(0xcb202d) }
+        else if(rating <= 2) { return ColorCode(0xff7800) }
+        else if(rating <= 3) { return ColorCode(0xffba00) }
+        else if(rating <= 4) { return ColorCode(0x9acd32) }
+        return ColorCode(0x5ba829);
+        }
     
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

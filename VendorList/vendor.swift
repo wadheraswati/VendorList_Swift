@@ -9,17 +9,28 @@
 import UIKit
 import Foundation
 
+let vendorName = "name"
+let vendorCity = "city"
+let vendorPrice = "vendor_price"
+let vendorImgURL = "profile_pic_url"
+let vendorReviewsCount = "reviews_count"
+let vendorRating = "vendor_rating"
+
 class vendor: NSObject {
 
     var name : String
     var city : String
     var price : String
     var imgUrl : String
+    var reviews : String
+    var rating : String
     
     init(json: [String: Any]) {
-        name = json["name"] as! String
-        city = json["city"] as! String
-        price = json["vendor_price"] as! String
-        imgUrl = json["profile_pic_url"] as! String
+        name = json[vendorName] as! String
+        city = json[vendorCity] as! String
+        price = json[vendorPrice] as! String
+        imgUrl = json[vendorImgURL] as! String
+        reviews = json[vendorReviewsCount] as! String
+        rating = json[vendorRating] as! String
     }
 }

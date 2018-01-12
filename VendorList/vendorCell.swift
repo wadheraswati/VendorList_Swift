@@ -72,7 +72,6 @@ class vendorCell: UITableViewCell {
         
         reviewLbl = UILabel(frame: CGRect(x: 0, y: cityLbl.frame.origin.y, width: 100, height: cityLbl.frame.size.height))
         reviewLbl.textColor = UIColor.black.withAlphaComponent(0.5)
-        reviewLbl.text = "(4 Reviews)"
         reviewLbl.font = priceLbl.font
         reviewLbl.textAlignment = .right
         self.addSubview(reviewLbl)
